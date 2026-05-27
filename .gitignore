@@ -1,0 +1,182 @@
+# =========================
+# Binaries / Build Outputs
+# =========================
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.a
+
+# Go build directories
+bin/
+build/
+dist/
+target/
+
+# =========================
+# Go Coverage / Profiling
+# =========================
+coverage.out
+coverage.html
+*.coverprofile
+*.pprof
+cpu.prof
+mem.prof
+block.prof
+mutex.prof
+trace.out
+
+# =========================
+# Go Workspace
+# =========================
+go.work
+go.work.sum
+
+# =========================
+# Vendor (optional)
+# Uncomment if you don't commit vendor
+# =========================
+# vendor/
+
+# =========================
+# IDE / Editor
+# =========================
+
+# VSCode
+.vscode/
+
+# Goland / IntelliJ
+.idea/
+*.iml
+
+# Vim
+*.swp
+*.swo
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+
+# =========================
+# Environment Files
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Docker
+# =========================
+docker-compose.override.yml
+
+# =========================
+# Kubernetes
+# =========================
+*.secret.yaml
+*.secrets.yaml
+
+# =========================
+# Temporary Files
+# =========================
+tmp/
+temp/
+.cache/
+
+# =========================
+# Testing
+# =========================
+test-results/
+junit.xml
+
+# =========================
+# Generated Files
+# =========================
+generated/
+mock/
+mocks/
+
+# =========================
+# Database Files
+# =========================
+*.db
+*.sqlite
+*.sqlite3
+
+# =========================
+# Air (Hot Reload)
+# =========================
+tmp/
+
+# =========================
+# Delve Debugger
+# =========================
+__debug_bin
+
+# =========================
+# Dependency Scanners
+# =========================
+.gosec.json
+
+# =========================
+# Terraform
+# =========================
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+
+# =========================
+# Helm
+# =========================
+charts/*.tgz
+
+# =========================
+# Node Modules (if frontend exists)
+# =========================
+node_modules/
+
+# =========================
+# Mac/Linux Executables
+# =========================
+main
+app
+
+# =========================
+# Generated Swagger/OpenAPI
+# =========================
+swagger.json
+swagger.yaml
+openapi.json
+openapi.yaml
+
+# =========================
+# protobuf generated files
+# =========================
+*.pb.go
+*.pb.gw.go
+*.pb.grpc.go
+
+# =========================
+# Generated mocks
+# =========================
+mock_*.go
+
+# =========================
+# Local Development Files
+# =========================
+.local/
+.devcontainer/
