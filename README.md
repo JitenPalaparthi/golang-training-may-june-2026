@@ -20,3 +20,13 @@ go run --work main.go
 go run .
 
 ```
+
+## Build go application
+
+```bash
+go build . 
+
+# file name
+go build -o app .
+
+```
