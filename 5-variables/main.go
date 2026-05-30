@@ -6,13 +6,17 @@ import (
 )
 
 var (
-	Global  int
-	Counter int = 9
+	Global  int     // unassigned value stores in BSS segment
+	Counter int = 9 // stores in Data Segment
 )
 
 const PI = 3.14
 
 func main() {
+
+	fmt.Println(Global, Counter, PI)
+
+	fmt.Println(&Global, &Counter)
 
 	a, b, c, d := 10, 20.3, true, "Hey" // tuple , there is no tuple in Go.
 	println(a, b, c, d)
@@ -116,3 +120,6 @@ type char = int32 // creating char as an alias for int32
 // 3. any , interface{}
 // 4. string
 // 5. binary and hexa values
+
+// 1001ac f50 B main.Global 0x105064 f50
+// 10017c 468 D main.Counter 0x105034 468
