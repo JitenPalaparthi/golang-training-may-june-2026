@@ -6,6 +6,8 @@ const PI = 3.14 // RO
 
 var Global int // unassigned , BSS
 
+var Str = "Hello World"
+
 func main() {
 
 	Counter++
@@ -40,6 +42,8 @@ func main() {
 	a1, b1, c1 = b1, c1, a1
 
 	println("a1:", a1, "b1:", b1, "c1:", c1)
+
+	println(Global, Str)
 }
 
 /*
