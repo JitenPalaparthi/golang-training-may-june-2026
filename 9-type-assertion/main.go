@@ -20,8 +20,8 @@ func main() {
 	// var num2 = any1.(int) // it failed to assert bcz any1 has the type of float64 but trying to assert to int which is invalid leads to panic/runtime error
 	// println(num2)
 
-	num2, done := any1.(int) // it failed to assert bcz any1 has the type of float64 but trying to assert to int which is invalid leads to panic/runtime error
-	if done {
+	num2, one := any1.(int) // it failed to assert bcz any1 has the type of float64 but trying to assert to int which is invalid leads to panic/runtime error
+	if one {
 		println("successfully asserted to int", num2)
 	} else {
 		num2, done := any1.(float64)
