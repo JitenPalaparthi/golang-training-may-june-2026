@@ -1,5 +1,9 @@
 package main
 
+var (
+	Global int = 100
+)
+
 func main() {
 
 	str1 := "Hello World"
@@ -35,6 +39,8 @@ func main() {
 		print("index: ", index, " >> ")
 	}
 	println()
+
+	println(Global, &Global)
 
 }
 
