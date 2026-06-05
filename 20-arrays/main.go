@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand/v2"
+	"sort"
 	"unsafe"
 )
 
@@ -57,6 +58,9 @@ func main() {
 		}
 	}
 	println("sum of arr3d using range loops", sum)
+
+	slice := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	fmt.Println(median(slice[:2]))
 }
 
 func Max(arr [5]int) int {
@@ -81,3 +85,33 @@ func MinMax(arr [5]int) (min int, max int) {
 	}
 	return min, max
 }
+
+func mean(arr []int) int {
+	sum := 0
+
+	for _, v := range arr {
+		sum += v
+	}
+	return sum / len(arr)
+}
+
+func median(arr []int) []int {
+
+	if len(arr) == 0 {
+		return nil
+	}
+	if len(arr) == 1 {
+		return []int{arr[0]}
+	}
+
+	sort.Ints(arr)
+
+	if (len(arr))%2 == 0 {
+		return []int{arr[len(arr)/2-1], arr[len(arr)/2]}
+	}
+
+	return []int{arr[len(arr)/2]}
+
+}
+
+func mode()
