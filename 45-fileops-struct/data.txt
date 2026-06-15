@@ -1,0 +1,4 @@
+Hello World, How are you doing!
+Learning a programming is a joy, if you feel it
+Hey Go Mind
+Can you write some code for me?
