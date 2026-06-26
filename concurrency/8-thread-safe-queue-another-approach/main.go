@@ -71,7 +71,11 @@ func (q *Queue) Dequeue() any {
 	return item
 }
 
-//|10| 20 |30 |40 |50 | 60|
+// |10| 20 |30 |40 |50 | 60|
 
 // go uses dlv debugger
 // c++ and rust used GDB and LLDB
+
+// Create a stack and make that push and pop operatioss happen
+
+// Make sure that the stack is thread safe
