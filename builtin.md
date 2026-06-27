@@ -1,18 +1,18 @@
 Keywords 
 
-break  case  const continue
+break  case  chan const continue
 
 default  else fallthrough
 
-for func  goto if
+for func  go goto if
 
 import  map package
 
 range return  struct
 
-switch type var
+select, switch type var
 
-chan defer go select interface 
+defer  interface 
 
 
 
