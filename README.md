@@ -102,3 +102,6 @@ go tool nm  demo # it gives symbol information , symbols are all types, function
 ## how to do the release build
 go build -ldflags="-s -w" -o demo-slim main.go
 ```
+
+
+github.com/JitenPalaparthi/golang-personal-training-june-july-2026-shapes
