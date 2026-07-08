@@ -105,3 +105,31 @@ go build -ldflags="-s -w" -o demo-slim main.go
 
 
 github.com/JitenPalaparthi/golang-personal-training-june-july-2026-shapes
+
+
+## Go test
+
+```bash
+# to test every thing, with cover profile
+go test -v ./... --coverprofile tests.out
+go tool cover -html tests.out
+
+# test only one package 
+
+go test internal/models/*_test.go
+
+# test only one functionality
+
+go test -test.fullpath=true -timeout 30s -run ^TestValidateProduct$ simple-commerce/internal/models
+# or
+go test -v  -run ^TestValidateProduct$ simple-commerce/internal/models
+
+# to test a full package
+go test -test.fullpath=true simple-commerce/internal/models 
+
+# to test a file in a module
+
+go test -test.fullpath=true -timeout 30s -run ^(TestValidateProduct|TestProductAll)$ simple-commerce/internal/models
+
+```
+
