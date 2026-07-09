@@ -14,6 +14,7 @@ var (
 	RETRY_DURATION = time.Second * 5
 )
 
+// /go:generate docker ps
 func Connect(dsn string) (db *gorm.DB, err error) {
 	for i := range RETRY_TIMES {
 		db, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})

@@ -24,6 +24,13 @@ func NewProductHandler(iproductdb repositories.IProductDB) IProductHandler {
 func (p *ProductHandler) CreateProduct(ctx *gin.Context) {
 	var product *models.Product
 
+	if p.IProductDB == nil {
+		slog.Error("nil IProductDB object")
+		ctx.String(http.StatusBadRequest, "oops! something went wrong, try again or consult admin")
+		ctx.Abort()
+		return
+	}
+
 	err := ctx.Bind(&product) // unmarshal
 	if err != nil {
 		slog.Error(err.Error())
@@ -41,8 +48,8 @@ func (p *ProductHandler) CreateProduct(ctx *gin.Context) {
 		return
 	}
 
-	product, err = p.Create(product)
-
+	//product, err = p.IProductDB.Create(product) // This is called on an interface
+	product, err = p.Create(product) // This is called on an interface
 	if err != nil {
 		slog.Error(err.Error())
 		ctx.String(http.StatusBadRequest, "oops! something went wrong, try again or consult admin")

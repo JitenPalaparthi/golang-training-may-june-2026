@@ -40,6 +40,8 @@ func init() {
 	flag.Parse()
 }
 
+//go:generate go install go.uber.org/mock/mockgen@latest
+
 func main() {
 
 	logger := slog.New(slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{Level: slog.LevelDebug}))
