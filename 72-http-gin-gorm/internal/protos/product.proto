@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package product.v1;
+
+// Configured for Go code generation
+option go_package = "simple-commerce/internal/proto;productspb";
+
+//import "google/protobuf/timestamp.proto";
+
+// Service defining the product creation logic
+service ProductService {
+  // Matches your function pattern: func Create(product) returns (product)
+  rpc CreateProduct (CreateProductRequest) returns (CreateProductResponse);
+}
+
+// Maps directly to your Go 'Product' struct
+message CreateProductRequest {
+  string name = 1;
+  string description = 2;
+  float price = 3;        // Maps directly to float32 in Go
+  int32 stock = 4;        // Maps directly to int in Go (32-bit architecture)
+  string status = 5; 
+}
+message CreateProductResponse {
+  uint64 id = 1; 
+  string name = 2;
+  string description = 3;
+  float price = 4;        // Maps directly to float32 in Go
+  int32 stock = 5;        // Maps directly to int in Go (32-bit architecture)
+  string status = 6;     
+   //google.protobuf.Timestamp last_modified = 7;
+   int64 last_modified = 7;
+
+}
+
+  

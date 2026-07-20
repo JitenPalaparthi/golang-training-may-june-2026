@@ -1,8 +1,7 @@
 services:
   app:
-    build: 
-      context: .
-      dockerfile: Dockerfile
+    image: jpalaparthi/demo-go-app:v0.1.0
+  
     container_name: demo-app
     restart: always 
     environment:
